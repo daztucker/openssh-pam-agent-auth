@@ -196,7 +196,7 @@ $(srcdir)/configure: configure.ac $(srcdir)/m4/*.m4
 	@exit 1
 
 .c.o:
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(PICFLAG) $(CPPFLAGS) -c $< -o $@
 
 LIBCOMPAT=openbsd-compat/libopenbsd-compat.a
 $(LIBCOMPAT): always
